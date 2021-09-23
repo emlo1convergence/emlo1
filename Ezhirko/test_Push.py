@@ -2,14 +2,14 @@ import pytest
 import pandas as pd
 from gitignore_parser import parse_gitignore
 
-matches = parse_gitignore('.gitignore')
+matches = parse_gitignore('Ezhirko/.gitignore')
 # you have NOT uploaded data
 def test_data_folder_not_present():
-    assert matches('Data')
+    assert matches('Ezhirko/Data')
 
 # you have NOT uploaded best-model-parameters.pt
 def test_model_file_not_present():
-    assert matches('best-model-parameters.pt')
+    assert matches('Ezhirko/best-model-parameters.pt')
 
 # your accuracy of the model is more than 70%
 def test_model_accuracy_above_seventy():
