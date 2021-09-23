@@ -5,7 +5,7 @@ from gitignore_parser import parse_gitignore
 matches = parse_gitignore('Ezhirko/.gitignore')
 # you have NOT uploaded data
 def test_data_folder_not_present():
-    assert matches('Ezhirko/Data')
+    assert matches('Ezhirko/data')
 
 # you have NOT uploaded best-model-parameters.pt
 def test_model_file_not_present():
