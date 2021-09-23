@@ -1,0 +1,4 @@
+outs:
+- md5: df30bbe5b6ec5703f697cf5d3f0c2ede
+  size: 541250559
+  path: best-model-parameters.pt
