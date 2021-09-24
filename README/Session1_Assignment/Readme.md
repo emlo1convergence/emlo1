@@ -32,11 +32,11 @@ DVC is a Data version control. It takes care of
 * The current state of merged data was again captured using dvc add data
 * The pytorch model was re trained for 11 epoch and achieved Test accuracy of 94.40 link to Ezhirko [metrics file](https://github.com/emlo1convergence/emlo1/blob/main/Ezhirko/Metrics.csv) and Pavan [metrics file](https://github.com/emlo1convergence/emlo1/blob/main/Pavan/Metrics.csv)
 * Best model dvc was captured. Ezhirko [data.dvc,best model.dvc,metrics.csv and gitignore](https://github.com/emlo1convergence/emlo1/tree/main/Ezhirko) and Pavan [data.dvc,best model.dvc,metrics.csv and gitignore](https://github.com/emlo1convergence/emlo1/tree/main/Pavan) was commited and push to our git repository
-* Pytest unit test cases was written in the file [test_Push.py](https://github.com/emlo1convergence/emlo1/blob/main/Ezhirko/test_Push.py)
-  *This file had test case written to verify if we have NOT uploaded data.zip
-  *To verify if we have NOT uploaded model.h5 file
-  *To verify the accuracy of the model is more than 70%
-  *To verify the accuracy of your model for cat and dog is independently more than 70%
+* Pytest unit test cases was written in the file [test_Push.py](https://github.com/emlo1convergence/emlo1/blob/main/Ezhirko/test_Push.py)<br />
+  *This file had test case written to verify if we have NOT uploaded data.zip<br />
+  *To verify if we have NOT uploaded model.h5 file<br />
+  *To verify the accuracy of the model is more than 70%<br />
+  *To verify the accuracy of your model for cat and dog is independently more than 70%<br />
  * Python workflow pipe line was created using Git Actions and pytest execution task was added to execute the test case on push job. link to [workflow file](https://github.com/emlo1convergence/emlo1/blob/main/.github/workflows/python-app.yml)
 
 **Ezhirko Repository** : https://github.com/emlo1convergence/emlo1/tree/main/Ezhirko <br />
