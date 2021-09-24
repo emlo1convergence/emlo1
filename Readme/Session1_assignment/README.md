@@ -38,3 +38,7 @@ DVC is a Data version control. It takes care of
   *To verify the accuracy of the model is more than 70%
   *To verify the accuracy of your model for cat and dog is independently more than 70%
  * Python workflow pipe line was created using Git Actions and pytest execution task was added to execute the test case on push job. link to [workflow file](https://github.com/emlo1convergence/emlo1/blob/main/.github/workflows/python-app.yml)
+
+**Ezhirko Repository** : https://github.com/emlo1convergence/emlo1/tree/main/Ezhirko <br />
+**Pavan Repository** : https://github.com/emlo1convergence/emlo1/tree/main/Pavan
+
