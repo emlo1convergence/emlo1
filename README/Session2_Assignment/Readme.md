@@ -26,9 +26,9 @@ Team Members
 ### How to use object-predict application ?
 * Goto web [link](https://object-predict.herokuapp.com/). The web page should look like below <br />
 ![](Images/Homepage.jpg)
-* Click on open button and select a image from your system that could belong to any of the classes in CIFAR10 dataset.
+* Click on open button and select a image from your system that could belong to any of the classes in CIFAR10 dataset. <br />
 ![](Images/Select.jpg)
-* Click on "Predict object" button. The Image is passed on to the model and the model predicts to which class it belongs. The prediction response is sent back to web page showing the result as below.
+* Click on "Predict object" button. The Image is passed on to the model and the model predicts to which class it belongs. The prediction response is sent back to web page showing the result as below. <br />
 ![](Images/Result.jpg)
 * Click on "Close" button to close the existing image.
 
