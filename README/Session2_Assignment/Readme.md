@@ -40,7 +40,7 @@ Team Members
 * Click on "Predict object" button. The Image is passed on to the model and the model predicts to which class it belongs. The prediction response is sent back to web page showing the result as below. <br />
 ![](Images/s2_screen3.png)
 
-* Click on "Close" button to close the existing image.
+* Click on "Predict Again" button to predict once again.
 
 **Ezhirko Repository** : https://github.com/emlo1convergence/emlo1/tree/main/Session2_Assignment/Ezhirko <br />
 **Pavan Repository** : https://github.com/emlo1convergence/emlo1/tree/main/Session2_Assignment/Pavan
