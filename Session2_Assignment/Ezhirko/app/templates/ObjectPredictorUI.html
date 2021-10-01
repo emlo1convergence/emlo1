@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table,
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<script type="text/javascript" src="{{url_for('static', filename='scripts/index.js')}}"></script>
+<body style="background-color: #606060;">
+    <table>
+        <tr>
+            <th colspan="2">Image Classifier Application.</th>
+        </tr>
+        <tr>
+            <td width="220">
+                {% if show_image %}
+                <div class="img_container" id="inp_img_container" style="display: block;">
+                    <img src="{{url_for('static', filename='uploads/'+img_name)}}" height="100" width="200" alt="Image Plot" id="inp_img_tag" class="img_tag">
+                </div>
+                {% else %}
+                <div class="img_container" id="inp_img_container" style="display: none;">
+                    <img height="100" width="200" id="inp_img_tag" class="img_tag">
+                </div>
+                {% endif %}
+            </td>
+            <td>
+                <div class="form">
+                    <form method="POST" action="https://object-predict.herokuapp.com/predict" enctype="multipart/form-data">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="file" id="img_upload" name="file" accept="image/*" style="display:none" onchange="loadImage(event)" value="{{request.files}}">
+                                    <label class="img_upload_label" for="img_upload"> &#xf1c5; Open</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" id="img_close" name="img_close" style="display:none" onclick="closeImage()"></button>
+                                    <label class="img_close_label" for="img_close"> &#10006; Close</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Predict object" class="pred_btn center" id="pred_btn">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {% if results %}
+                <h3>Results:</h3>
+                {% endif %}
+            </td>
+            <td>
+                {% if results %}
+                <h3>{{results['class_name']}}</h3>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
