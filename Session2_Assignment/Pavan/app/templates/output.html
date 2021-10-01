@@ -1,0 +1,103 @@
+<head>
+    <title>Image Upload</title>
+    <style>
+      body {
+        margin:0px;
+      }
+    
+      .center {
+        display:inline;
+        margin: 3px;
+      }
+    
+      .form-input {
+        width:100px;
+        padding:3px;
+        background:#fff;
+        border:2px dashed dodgerblue;
+      }
+      .form-input input {
+        display:none;
+      }
+      .form-input label {
+        display:block;
+        width:100px;
+        height: auto;
+        max-height: 100px;
+        background:#333;
+        border-radius:10px;
+        cursor:pointer;
+      }
+    
+      .form-input img {
+        width:100px;
+        height: 100px;
+        margin: 2px;
+        opacity: .4;
+      }
+    
+      .imgRemove{
+        position: relative;
+        bottom: 114px;
+        left: 68%;
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        outline: none;
+      }
+      .imgRemove::after{
+        content: ' \21BA';
+        color: #fff;
+        font-weight: 900;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .small{
+        color: firebrick;
+      } 
+      </style>
+    
+    </head>
+    
+    <body>
+	<h1>CIFAR10 PREDICTOR</h1>
+    <h3>RESULT</h3>
+       <div class="image-upload-one">
+         <div class="center">
+           {% if show_image %}
+                <div class="img_container" id="inp_img_container" style="display: block;">
+                    <img src="{{url_for('static', filename='uploads/'+img_name)}}" height="100" width="200" alt="Image Plot" id="inp_img_tag" class="img_tag">
+                </div>
+                {% else %}
+                <div class="img_container" id="inp_img_container" style="display: none;">
+                    <img height="100" width="200" id="inp_img_tag" class="img_tag">
+                </div>
+            {% endif %}
+           {% if results %}
+            <h3>{{results['class_name']}}</h3>
+        {% endif %}
+         </div>
+       </div>
+        
+      <script>
+    
+        function showPreviewOne(event){
+          if(event.target.files.length > 0){
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("file-ip-1-preview");
+            preview.src = src;
+            preview.style.display = "block";
+          } 
+        }
+        function myImgRemoveFunctionOne() {
+          document.getElementById("file-ip-1-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+        }
+        function openLink() {
+            window.open("https://cifar10-predictor.herokuapp.com/", "_self");
+        }
+      </script>
+    <!--<button><a href='http://127.0.0.1:5000/' alt='Broken Link'>Predict Again</a></button>-->
+    <form>
+        <input type="button" value="Predict Again" onclick="openLink()">
+      </form>
+    </body>
