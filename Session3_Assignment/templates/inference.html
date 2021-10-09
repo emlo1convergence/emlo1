@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="main">
+        {% if show_image1 %}
+        <div class="cards" style="width: 20%; display: inline-block; box-shadow: 2px 2px 20px black;border-radius:5px;margin:2%">
+            <div class="image">
+                <img src="{{url_for('static', filename='uploads/'+img_name1)}}" id="inp_img_tag"
+                     style="width:100%;border-top-right-radius:5px;border-top-left-radius:5px">
+            </div>
+            <div class="result" style="text-align:center;padding:10px">
+                <h1 style="font-size:20px">{{results1}}</h1>
+            </div>
+        </div>
+        {% endif %}
+        {% if show_image2 %}
+        <div class="cards" style="width: 20%; display: inline-block; box-shadow: 2px 2px 20px black;border-radius:5px;margin:2%">
+            <div class="image">
+                <img src="{{url_for('static', filename='uploads/'+img_name2)}}" id="inp_img_tag"
+                     style="width:100%;border-top-right-radius:5px;border-top-left-radius:5px">
+            </div>
+            <div class="result" style="text-align:center;padding:10px">
+                <h1 style="font-size:20px">{{results2}}</h1>
+            </div>
+        </div>
+        {% endif %}
+        {% if show_image3 %}
+        <div class="cards" style="width: 20%; display: inline-block; box-shadow: 2px 2px 20px black;border-radius:5px;margin:2%">
+            <div class="image">
+                <img src="{{url_for('static', filename='uploads/'+img_name3)}}" id="inp_img_tag"
+                     style="width:100%;border-top-right-radius:5px;border-top-left-radius:5px">
+            </div>
+            <div class="result" style="text-align:center;padding:10px">
+                <h1 style="font-size:20px">{{results3}}</h1>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th class="main_heading" colspan="2">Previous 5 Results</th>
+                </tr>
+                <tr>
+                    <th>Inference</th>
+                    <th>Confidence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        {{results['r1_inference']}}
+                    </td>
+                    <td>
+                        {{results['r1_confidence']}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{results['r2_inference']}}
+                    </td>
+                    <td>
+                        {{results['r2_confidence']}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{results['r3_inference']}}
+                    </td>
+                    <td>
+                        {{results['r3_confidence']}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{results['r4_inference']}}
+                    </td>
+                    <td>
+                        {{results['r4_confidence']}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{results['r5_inference']}}
+                    </td>
+                    <td>
+                        {{results['r5_confidence']}}
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+    <style>
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .main_heading {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: center;
+        }
+
+            .styled-table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px;
+            }
+
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+                .styled-table tbody tr:nth-of-type(even) {
+                    background-color: #f3f3f3;
+                }
+
+                .styled-table tbody tr:last-of-type {
+                    border-bottom: 2px solid #009879;
+                }
+
+                .styled-table tbody tr.active-row {
+                    font-weight: bold;
+                    color: #009879;
+                }
+    </style>
+{% endblock %}

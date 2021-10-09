@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="px-3 py-3 text-center">
+            <h1 class="display-4">About this project</h1>
+            <div class="my-2">
+                <img style="max-width: 600px; width: 100%;" src="{{ url_for('static', filename='img/flask+pytorch.png') }}" alt="">
+            </div>
+            <p class="lead">
+                This project is aimed to help Pytorch machine learning developers to quickly build a Flask
+                web app
+                in a Docker container ready to be deployed. <br> <a href="https://github.com/emlo1convergence/emlo1/tree/main/Session3_Assignment"> View on GitHub</a>
+            </p>
+            <p>
+                By default, this app uses MobileNetV2 image classifier that was pre-trained on the ImageNet dataset.
+                This application allows to upload upto maximum of 3 images simultaneously and infer their results. The Classification Name and Confidence level of the last 5 images uploaded are displayed. More explanation about this project can be
+                found in the GitHub repository link.
+            </p>
+            <p>
+                <h1>Developed by:</h1>
+                <b>Ezhirko Arulmozhi:</b> Data Scientist working in Siemens Healthineers with work experience of 14 years.</br>
+                <b>Naga Pavan Kumar:</b> Data Scientist working in Accenture CPG.AI with work experience of 9 years.
+</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

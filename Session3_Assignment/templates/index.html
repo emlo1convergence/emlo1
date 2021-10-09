@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <div>
+            <h1 class="display-4">Pytorch Flask Docker App</h1>
+            <p style="text-align:center">
+                <a href="https://github.com/emlo1convergence/emlo1/tree/main/Session3_Assignment"> View on GitHub</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row">
+        <div>
+                <div class="cards" style="width: 30%; box-shadow: 2px 2px 20px black; border-radius: 5px; margin: 2%; position:relative;float:right">
+                    <div class="result" style="text-align:center;padding:10px">
+                        <h1 style="font-size:14px">Sample Image Results</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{{url_for('static', filename='uploads/'+'sample.png')}}" id="inp_img_tag"
+                             style="width:100%;border-top-right-radius:5px;border-top-left-radius:5px">
+                    </div>
+                    <div class="result" style="text-align:center;padding:10px">
+                        <h1 style="font-size:14px">{{sample_result}}</h1>
+                    </div>
+                </div>
+        </div>
+    <div class="mb-2 col-md-6 offset-md-3">
+        <form action="/infer" method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" name="file" accept=".jpg, .jpeg, .png" class="custom-file-input" id="inputGroupFile"
+                           aria-describedby="inputGroupFileAddon04" multiple>
+                    <label class="custom-file-label" id="fileList" for="inputGroupFile">Choose upto 3 files</label>
+                </div>
+                <div class="input-group-append">
+                    <input type="submit" value="Upload" class="btn btn-outline-secondary" type="button"
+                           id="inputGroupFileAddon04" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3 my-5">
+            <center>
+                <p class="text-muted">
+                    By default, this app uses MobileNetV2 image classifier that was pre-trained on the ImageNet dataset.
+                    This can be easily changed with any custom deep learning model.
+                </p>
+            </center>
+        </div>
+    </div>
+</div>
+{% endblock %}
