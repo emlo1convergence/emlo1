@@ -12,8 +12,8 @@ Team Members
 
 ### Session 3 Assignment Execution
 * Installed Docker for windows from [here](https://docs.docker.com/desktop/windows/install/)
-* Made use of [exiting code](https://github.com/imadtoubal/Pytorch-Flask-Starter) provided by author Imad Toubal
-* Ran his application by creating a docker image based out of python 3
+* Made use of [existing code](https://github.com/imadtoubal/Pytorch-Flask-Starter) provided by author Imad Toubal
+* Ran the application by creating a docker image based out of python 3
 * Modified the User interface to display a default sample image with his infered output from mobile net model. This was done by adding a Entrypoint and Command to docker file and passing a sample image for the model to infer. Link to our [docker file](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/Dockerfile)
 * The application has be modified to take in 3 images simultaneously and pass on to the mobile net model. The predicted output (The class name and confidence score) is shown along with the uploaded images in the inference page. Here is [inference code](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/app.py) and [Inference HTML](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/templates/inference.html)
 * The result of the prediction is saved to a csv file on the storage. The last 5 prediction are retrived from this [csv file](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/static/uploads/prev_result.csv) and displayed on the inference page.
