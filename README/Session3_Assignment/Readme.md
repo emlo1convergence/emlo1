@@ -19,10 +19,10 @@ Team Members
 * The result of the prediction is saved to a csv file on the storage. The last 5 prediction are retrived from this [csv file](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/static/uploads/prev_result.csv) and displayed on the inference page.
 * The Main page contains a dropdown that displays our team and project information and option to return back to main page. Here is [About HTML](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/templates/about.html)
 * The modified code is containerized on Python 3 docker image and deployed on Heroku. Below are the steps to deploy on Heroku</br>
-  -heroku container:login
-  -heroku create ABC
-  -heroku container:push web -a ABC
-  -heroku container:release web -a  ABC
+  - heroku container:login
+  - heroku create ABC
+  - heroku container:push web -a ABC
+  - heroku container:release web -a  ABC
   where ABC is the name your application. Access the app through the url https//ABC.herokuapp.com/
 ### How to use convergence classifier application ?
 * Goto web [link](https://convergence-classifier-app.herokuapp.com/). The web page should look like below <br />
