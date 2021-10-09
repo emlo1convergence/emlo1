@@ -1,0 +1,12 @@
+-f https://download.pytorch.org/whl/torch_stable.html
+pandas
+numpy
+Click>=7.1.2
+Flask>=1.1.2
+itsdangerous==1.1.0
+Jinja2>=2.11.2
+MarkupSafe==1.1.1
+Werkzeug>=2.0.0
+gunicorn>=20.0.4
+torch==1.9.1+cpu
+torchvision==0.10.1+cpu
