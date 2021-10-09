@@ -18,7 +18,7 @@ Team Members
 * The application has be modified to take in 3 images simultaneously and pass on to the mobile net model. The predicted output (The class name and confidence score) is shown along with the uploaded images in the inference page. Here is [inference code](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/app.py) and [Inference HTML](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/templates/inference.html)
 * The result of the prediction is saved to a csv file on the storage. The last 5 prediction are retrived from this [csv file](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/static/uploads/prev_result.csv) and displayed on the inference page.
 * The Main page contains a dropdown that displays our team and project information and option to return back to main page. Here is [About HTML](https://github.com/emlo1convergence/emlo1/blob/main/Session3_Assignment/templates/about.html)
-* The modified code is containerized on Python 3 docker image and deployed on Heroku. Below are the steps to deploy on Heroky
+* The modified code is containerized on Python 3 docker image and deployed on Heroku. Below are the steps to deploy on Heroku</br>
   -heroku container:login
   -heroku create ABC
   -heroku container:push web -a ABC
